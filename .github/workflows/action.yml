@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # `0 23 * * *` 表示UTC 23:00，即北京时间7:00打卡（经测试，实际运行时间比设定时间晚几分钟到几十分钟）。
-    - cron: '0 23 * * *'
+    - cron: '45 02 * * *'
 
 jobs:
   main:
@@ -17,7 +17,7 @@ jobs:
             password: ZJU_PASSWORD
     steps:
       - name: 打卡
-        uses: zju-health-report/action@release
+        uses: JouleYuan/zju-health-report@release
         with:
           username: ${{ secrets[matrix.username] }}
           password: ${{ secrets[matrix.password] }}
