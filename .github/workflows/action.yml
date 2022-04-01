@@ -1,4 +1,4 @@
-name: '@zju-health-report/action Demo'
+name: '@zju-health-daily-report'
 
 on:
   workflow_dispatch:
